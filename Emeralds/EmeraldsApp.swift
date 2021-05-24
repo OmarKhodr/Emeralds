@@ -11,7 +11,10 @@ import SwiftUI
 struct EmeraldsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ContentView(snippets: Snippet.data)
+            }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
 }
